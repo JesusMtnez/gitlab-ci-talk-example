@@ -6,6 +6,7 @@ stages:
  - build
  - test
  - release
+ - deploy
 
 compile-job:
   stage: build
@@ -27,3 +28,8 @@ release-job:
   only:
     - master
     - tags
+
+deploy-heroku-job:
+  stage: deploy
+  script:
+    - sbt stage deployHeroku
