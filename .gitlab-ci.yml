@@ -5,3 +5,8 @@ compile-job:
   stage: build
   script:
     - sbt compile
+
+test-job:
+  stage: test
+  script:
+    - sbt test
