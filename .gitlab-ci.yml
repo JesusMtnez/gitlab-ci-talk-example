@@ -1,0 +1,7 @@
+#.gitlab-ci.yml
+image: vadivelk/alpine-sbt
+
+compile-job:
+  stage: build
+  script:
+    - sbt compile
